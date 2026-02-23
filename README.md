@@ -1,9 +1,37 @@
-# Nigeria House Price Prediction (Machine Learning Project)
+# 🏠 Nigeria House Price Prediction
 
 ## 📌 Overview
-This project develops a machine learning model that predicts house prices in Nigeria based on property features such as location, size, and housing attributes. The project demonstrates an end-to-end data science workflow including data preprocessing, model training, evaluation, and deployment through an interactive prediction app.
+This project predicts house prices across Nigeria using machine learning models.  
+It leverages a cleaned dataset of over **11,000 property listings** across **23 states** and **185 towns**, with features such as:
 
-The goal is to provide data-driven insights for real estate pricing and support property valuation decisions.
+- Bedrooms  
+- Bathrooms  
+- Toilets  
+- Parking spaces  
+- Property type  
+- Town  
+- State  
+
+The goal is to provide an interactive tool for estimating property values and exploring housing trends in Nigeria.
+
+---
+
+## 📂 Project Files
+- **Nigeria House Price Prediction.pdf** → Full project report with data exploration, cleaning, modeling, and evaluation.  
+- **nigeria_houses_data.csv** → Raw dataset containing property listings.  
+- **nigeria_houses_data_clean.csv** → Cleaned dataset after removing duplicates, renaming columns, and handling outliers.  
+- **house_price_model.pkl** → Saved trained pipeline (XGBoost model).  
+- **app.py** → Streamlit app for interactive price prediction.  
+
+---
+
+## 🧹 Data Cleaning
+Steps performed:
+- Removed **10,438 duplicate entries**.  
+- Renamed `title` → `property_type`.  
+- Created a new feature:  
+  ```python
+  total_rooms = bedrooms + bathrooms + toilets + parking_space
 
 ---
 
@@ -27,4 +55,5 @@ The goal is to provide data-driven insights for real estate pricing and support 
 
 ---
 
-## 📂 Project Structure
+## Model Deployment
+[House Price Prediction]{https://nigeria-house-price-prediction-ml-jpxsw4itvhqhnzqmruakbs.streamlit.app/}
