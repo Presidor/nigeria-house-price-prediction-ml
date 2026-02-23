@@ -54,6 +54,12 @@ Steps performed:
 6. Prediction interface
 
 ---
+## Model Used
+1. Linear Regression → **R² = 0.47**
+2. Random Forest Regressor → **R² = 0.49**
+3. XGBoost Regressor → **R² = 0.54 (Best performing model)**
+
+---
 
 ## Model Deployment
 [APP link](https://nigeria-house-price-prediction-ml-jpxsw4itvhqhnzqmruakbs.streamlit.app/)
