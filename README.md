@@ -56,4 +56,4 @@ Steps performed:
 ---
 
 ## Model Deployment
-[House Price Prediction]{https://nigeria-house-price-prediction-ml-jpxsw4itvhqhnzqmruakbs.streamlit.app/}
+[APP link](https://nigeria-house-price-prediction-ml-jpxsw4itvhqhnzqmruakbs.streamlit.app/)
