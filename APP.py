@@ -57,7 +57,6 @@ parking_space = st.sidebar.slider("Parking Space", 0, 10, 1)
 
 # Location inputs
 state = st.sidebar.selectbox("State", sorted(df["state"].unique()))
-
 filtered_towns = df[df["state"] == state]["town"].unique()
 town = st.sidebar.selectbox("Town", sorted(filtered_towns))
 
@@ -71,6 +70,10 @@ property_type = st.sidebar.selectbox(
 # -------------------------------
 total_rooms = bedrooms + bathrooms + toilets + parking_space
 
+# NEW FEATURE → price per room proxy
+# (safe division to avoid errors)
+price_per_room = 1 / total_rooms if total_rooms > 0 else 0
+
 # -------------------------------
 # PREDICTION
 # -------------------------------
@@ -83,6 +86,7 @@ if st.sidebar.button("Predict Price"):
             "toilets": toilets,
             "parking_space": parking_space,
             "total_rooms": total_rooms,
+            "price_per_bedroom": price_per_bedroom, 
             "property_type": property_type,
             "town": town,
             "state": state
@@ -91,6 +95,11 @@ if st.sidebar.button("Predict Price"):
         prediction = model.predict(features)[0]
 
         st.success(f"💰 Estimated House Price: ₦{prediction:,.0f}")
+
+        # optional display
+        if total_rooms > 0:
+            estimated_price_per_room = prediction / total_rooms
+            st.info(f"Estimated Price per Bedroom: ₦{estimated_price_per_bedroom:,.0f}")
 
     except Exception as e:
         st.error(f"Prediction failed: {e}")
