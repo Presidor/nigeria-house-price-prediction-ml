@@ -69,7 +69,9 @@ property_type = st.sidebar.selectbox(
 # -------------------------------
 # FEATURE ENGINEERING
 # -------------------------------
-total_rooms = bedrooms + bathrooms + toilets + parking_space
+restrooms = bathrooms + toilets / 2
+total_rooms = bedrooms + restrooms
+bedrooms_per_restrooms = restrooms / bedrooms
 
 # -------------------------------
 # PREDICTION
@@ -85,7 +87,9 @@ if st.sidebar.button("Predict Price"):
             "total_rooms": total_rooms,
             "property_type": property_type,
             "town": town,
-            "state": state
+            "state": state,
+            "restrooms": restrooms,
+            "bedrooms_per_restrooms":bedrooms_per_restrooms
         }])
 
         prediction = model.predict(features)[0]
