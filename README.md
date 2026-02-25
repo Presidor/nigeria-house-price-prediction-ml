@@ -56,7 +56,8 @@ Steps performed:
 3. Exploratory data analysis
 4. Model training
 5. Model evaluation
-6. Prediction interface
+6. Hyperparameter Tuning
+7. Prediction interface
 
 ---
 ## Model Used
