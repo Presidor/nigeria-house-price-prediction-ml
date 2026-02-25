@@ -65,6 +65,14 @@ Steps performed:
 3. XGBoost Regressor → **R² = 0.54 (Best performing model)**
 
 ---
+## 📊 Insights
+- Most expensive towns: Ifako-Ijaiye, Maitama District, Guzape District, Asokoro District, Katampe
+- Cheapest towns: Jos South, Eko Atlantic City, Yewa South, Egbeda, Jikwoyi
 
+**Property type trends:**
+- Semi Detached Bungalows are the cheapest (~₦383k average)
+- Detached Duplexes are the most expensive (~₦2.35M average)
+
+---
 ## Model Deployment
 [APP link](https://nigeria-house-price-prediction-ml-jpxsw4itvhqhnzqmruakbs.streamlit.app/)
