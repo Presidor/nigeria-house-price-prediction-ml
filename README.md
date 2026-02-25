@@ -28,10 +28,15 @@ The goal is to provide an interactive tool for estimating property values and ex
 ## 🧹 Data Cleaning
 Steps performed:
 - Removed **10,438 duplicate entries**.  
-- Renamed `title` → `property_type`.  
-- Created a new feature:  
-  ```python
-  total_rooms = bedrooms + bathrooms + toilets + parking_space
+- Renamed `title` → `property_type`.
+
+---
+
+## Feature Engineering
+**Created a new feature:**
+- restrooms = average of bathrooms & toilets
+- total_rooms = bedrooms + restrooms
+- bedrooms_per_restrooms ratio
 
 ---
 
